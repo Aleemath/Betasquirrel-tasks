@@ -1,0 +1,30 @@
+body {
+  background-color: #ececec;
+  margin: 0 auto;
+}
+#navbar {
+  background-color: #625c5c;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo-container {
+  width: 30px;
+  float: left;
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+}
+#logo-container img {
+  height: 60px;
+  margin-right: 15px;
+}
+#logo-container h2 {
+  display: inline-block;
+  color: white;
+}
+#profile-container {
+  width: 250px;
+  float: right;
+}
