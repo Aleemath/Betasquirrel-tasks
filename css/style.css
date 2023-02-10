@@ -1,0 +1,14 @@
+body {
+  background-color: darkcyan;
+}
+body a {
+  color: white;
+  font-size: xx-large;
+  text-decoration: none;
+  margin: 50px;
+  padding-left: 150px;
+}
+body h1 {
+  padding: 50px;
+  margin-left: 350px;
+}
