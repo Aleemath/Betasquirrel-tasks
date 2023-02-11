@@ -54,3 +54,5 @@ task from betasquirrel
 
 ## Demo
 - [live](https://aleemath.github.io/Betasquirrel-tasks/)
+- [Stack-overflow](https://stackoverflow.com/users/21197797/aleemath-ranseena-k-k)
+- [linkedin](https://www.linkedin.com/in/aleemath-ranseena-3b6154266/)
