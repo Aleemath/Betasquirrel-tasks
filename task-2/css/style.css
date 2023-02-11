@@ -1,29 +1,33 @@
 body {
-  background-color: black;
+  background-color: #301b1a;
 }
 #navbar {
-  background-color: rgb(102, 55, 153);
+  background-color: #533261;
   height: 60px;
   margin-bottom: 15px;
 }
 #main-container {
-  background-color: rgb(224, 217, 237);
-  height: 300px;
+  background-color: #d2d9e9;
+  height: 280px;
   margin-bottom: 15px;
   display: flex;
   margin-left: 15px;
   margin-right: 15px;
 }
-.m-r {
-  float: right;
+.first-box {
+  justify-items: center;
+  margin: 50px 0 0 30px;
+  padding: 5px;
 }
-.boxes {
-  background-color: rgb(103, 221, 107);
+.second-box {
+  padding: 5px;
+  margin: 50px 0 0 350px;
+}
+.first-box,
+.second-box {
+  background-color: #85df7f;
   height: 180px;
   width: 400px;
-  padding-left: 8px;
-  padding-top: 8px;
-  margin: 50px 100px;
 }
 .right {
   float: right;
@@ -34,6 +38,8 @@ body {
 .right a {
   color: #fff;
   padding: 20px;
+  text-decoration: none;
+  font-size: larger;
 }
 .left h2 {
   color: #fff;
@@ -44,7 +50,7 @@ body {
 }
 #second-container {
   height: 300px;
-  background-color: rgb(190, 51, 5);
+  background-color: #b94142;
   margin-bottom: 15px;
   margin-right: 15px;
   margin-left: 15px;
@@ -53,6 +59,6 @@ body {
 }
 #third-container {
   height: 290px;
-  background-color: rgb(247, 240, 240);
-  border: 3px solid green;
+  background-color: #dadada;
+  border: 3px solid #479029;
 }
