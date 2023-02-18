@@ -58,3 +58,15 @@ div {
   font-size: x-large;
   text-decoration: none;
 }
+@media only screen and (max-width: 650px) {
+  .right {
+    display: none;
+  }
+  .boxes {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #main-container {
+    height: 480px;
+  }
+}
