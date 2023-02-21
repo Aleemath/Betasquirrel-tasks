@@ -39,18 +39,20 @@ div {
 }
 .left {
   float: left;
-  display: inline;
+  display: flex;
   padding: 0 0 30px 0;
+  align-items: center;
+  justify-content: space-between;
 }
 .left img {
   height: 50px;
   padding-top: 15px;
 }
 .left h2 {
-  display: inline;
   color: white;
-  margin: 10px;
+  margin: 25px 0 0 10px;
   font-size: xx-large;
+  display: inline-block;
 }
 .right a {
   color: white;

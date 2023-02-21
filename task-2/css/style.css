@@ -40,11 +40,12 @@ body {
   margin: 15px;
   display: flex;
   padding: 15px;
+  width: calc(100vw - 55px);
 }
 .box {
   background-color: #86df7e;
   padding: 15px;
-  width: 300px;
+  width: calc((100vw - 600px) / 2);
 }
 #secondary-container {
   background-color: #b94141;
@@ -58,14 +59,17 @@ body {
   height: 100%;
 }
 @media only screen and (max-width: 650px) {
-  .box {
-    font-size: 14px;
-    height: 350px;
-  }
   #menu-container {
     display: none;
   }
+  .box {
+    width: calc(100% - 30px);
+  }
   #main-container {
-    height: 380px;
+    display: block;
+    height: auto;
+  }
+  .one {
+    margin-bottom: 15px;
   }
 }
