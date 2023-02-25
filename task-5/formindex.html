@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="logo-container">
+        <img src="image/logo.png" alt="logo" />
+        <h2>One School</h2>
+      </div>
+      <div id="profile-container">
+        <img src="image/profile.jpeg" alt="profile" />
+      </div>
+    </div>
+    <div class="main">
+      <div id="sidebar">
+        <a href="#">STUDENTS</a>
+        <a href="#">STAFF</a>
+        <a href="#">EXAMS</a>
+      </div>
+    </div>
+    <div id="main-container">
+      <div id="header">
+        <h3>STUDENT REGISTRATION</h3>
+      </div>
+      <form class="form-area">
+        <div class="first-one">
+          <label for="first-name">First Name<span>*</span> :</label>
+          <input
+            id="first-name"
+            type="text"
+            placeholder="Enter your first name"
+            autofocus
+          />
+        </div>
+        <div class="second-one">
+          <label for="last-name">Last Name<span>*</span> :</label>
+          <input
+            id="last-name"
+            type="text"
+            placeholder="Enter your last name"
+            autofocus
+          />
+        </div>
+        <div class="third-one">
+          <label for="mobile">Mobile<span>*</span> :</label>
+          <input
+            id="mobile"
+            type="text"
+            placeholder="Enter your mobile number"
+            autofocus
+          />
+        </div>
+        <div class="fourth-one">
+          <label for="email">Email<span>*</span> :</label>
+          <input
+            id="email"
+            type="text"
+            placeholder="Enter your email"
+            autofocus
+          />
+        </div>
+        <div class="fifth-one">
+          <label for="branch">Branch<span>*</span> :</label>
+          <input
+            list="branches"
+            type="text"
+            placeholder="select branches you like"
+          />
+          <datalist id="branches">
+            <option>Computer science engineering</option>
+            <option>Mechanical engineering</option>
+            <option>Civil engineering</option>
+          </datalist>
+        </div>
+        <div class="sixth-one">
+          <label for="">Do You Need Hospital Facility :</label>
+          <div class="radio">
+            <div>
+              <input type="radio" name="hospital" id="yes" />
+              <label class="radio-label" for="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" name="hospital" id="no" />
+              <label class="radio-label" for="no">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="seventh-one">
+          <label for="">Choose Additional Subjects :</label>
+          <div class="check">
+            <div>
+              <input id="cs" type="checkbox" />
+              <label for="cs">Cyber Security</label>
+            </div>
+            <div>
+              <input id="Ai" type="checkbox" />
+              <label for="Ai">Artificial Intelligence </label>
+            </div>
+            <div>
+              <input id="bc" type="checkbox" />
+              <label for="bc">Block Chain</label>
+            </div>
+            <div>
+              <input id="iot" type="checkbox" />
+              <label for="iot">IoT</label>
+            </div>
+            <div>
+              <input id="robotics" type="checkbox" />
+              <label for="robotics">Robotics</label>
+            </div>
+          </div>
+        </div>
+        <div class="eaight-one">
+          <label for="">Permanent Address <span>*</span> :</label>
+          <textarea
+            id="pm"
+            cols="60"
+            rows="7"
+            placeholder="Enter your full address"
+          ></textarea>
+        </div>
+        <div class="button">
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
