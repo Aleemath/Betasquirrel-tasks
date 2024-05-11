@@ -65,8 +65,8 @@ div {
     display: none;
   }
   .boxes {
-    width: 100%;
-    margin-bottom: 15px;
+    width: calc(100% - 20px);
+    margin: 0 0 15px 0;
     height: 350px;
   }
   #main-container {

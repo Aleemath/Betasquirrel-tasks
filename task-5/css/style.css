@@ -1,3 +1,6 @@
+body {
+  margin: 0 auto;
+}
 #navbar {
   height: 80px;
   display: flex;
@@ -68,4 +71,18 @@ th {
 }
 #header {
   margin-top: -600px;
+}
+@media only screen and (max-width: 650px) {
+  #sidebar {
+    width: 100px;
+  }
+  table {
+    display: block;
+  }
+  .heading {
+    padding-left: 120px;
+  }
+  .add-student {
+    margin: 0 auto;
+  }
 }
