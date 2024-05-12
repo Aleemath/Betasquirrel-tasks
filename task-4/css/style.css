@@ -206,6 +206,7 @@ body {
 @media only screen and (max-width: 800px) and (min-width: 360px) {
   #container {
     overflow: auto;
+    height: calc(100% - 81px);
   }
   #tile-container,
   #circle-container {
@@ -221,5 +222,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+  }
+  #sidebar {
+    display: none;
   }
 }
