@@ -90,7 +90,10 @@ th {
   display: flex;
   align-items: center;
 }
-#sidebar img {
-  height: 25px;
+#sidebar i {
+  height: 20px;
   margin-right: 10px;
+  vertical-align: middle;
+  line-height: 20px !important;
+  color: #a259ff;
 }
