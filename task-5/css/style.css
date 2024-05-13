@@ -86,3 +86,11 @@ th {
     margin: 0 auto;
   }
 }
+.flex {
+  display: flex;
+  align-items: center;
+}
+#sidebar img {
+  height: 25px;
+  margin-right: 10px;
+}
