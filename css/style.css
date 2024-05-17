@@ -21,6 +21,7 @@ body h1 {
   }
   body a {
     margin: 0 auto;
+    padding-left: 130px;
   }
   #task-5 {
     margin: 0 auto;

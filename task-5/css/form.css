@@ -110,3 +110,31 @@ button[type="submit"] {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 650px) {
+  #sidebar {
+    display: none;
+  }
+  #main-container {
+    margin: 0 auto;
+    margin-left: 10px;
+  }
+  button[type="reset"] {
+    margin: 15px 0 0 0;
+  }
+  .second-one,
+  .fourth-one,
+  .sixth-one,
+  .fifth-one {
+    margin: 0 auto;
+  }
+  #header {
+    padding: 0;
+  }
+  .third-one,
+  .fifth-one {
+    padding-bottom: 10px;
+  }
+  .check div {
+    padding: 0;
+  }
+}

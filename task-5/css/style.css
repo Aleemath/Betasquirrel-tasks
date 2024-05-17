@@ -74,16 +74,23 @@ th {
 }
 @media only screen and (max-width: 650px) {
   #sidebar {
-    width: 100px;
+    display: none;
   }
   table {
-    display: block;
+    float: left;
+    margin: 15px;
   }
-  .heading {
-    padding-left: 120px;
+  .main-container {
+    margin: 20px;
+  }
+  #header {
+    margin-top: 15px;
   }
   .add-student {
-    margin: 0 auto;
+    margin-left: 80px;
+  }
+  .heading {
+    padding-left: 20px;
   }
 }
 .flex {
