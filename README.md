@@ -1,58 +1,147 @@
-# Betasquirrel-tasks
-task from betasquirrel 
+# Consultation Report Project
 
-## Requirements
+## Overview
 
-| Requirements                | output                          |
-|---------------              | ------------------------------- |
-|![Task 1](images/task-1.jpeg)|![Task 1](screenshots/task-1.png)|
-|![Task 2](images/task-2.jpeg)|![Task 1](screenshots/task-2.png)|
-|![Task 4](images/task-4.jpeg)|![Task 1](screenshots/task-4.png)|
-## Linux commands
+This is a full-stack web application built with Laravel (PHP) for the backend and React (Vite + TypeScript) for the frontend. It allows medical professionals to create and download consultation reports with clinic management, logo uploads, and more.
 
-- `cd` - change current directory
-- `cd .` - one step back from the current directory
--  `cd ..` - two step back
--  `ls` - list contents of a directory
--  `ls -a` - show hidden files
--  `pwd` - display current working directory
--  `cat` - display contents of a file
--  `clear` - to clear the page
--  `mkdir` - to create a folder
+## Tech Stack
 
-## Git commands
+- Frontend: React + TypeScript + Vite
 
-1. `git config` - configure git user Ex: 'git config --global user.name"enter the user name"'
-2. `git clone` - clone a remote git repository to your local Ex:'git clone "paste the link"
-3. `git add` - add your file changes to git (git add .)
-4. `git status` - see the current status
-5. `git commit` - commit the changes to git (git commit -m "enter the message")
-6. `git push` - push local commit to repo
+- Backend: Laravel 12.x (PHP 8.1+)
 
-## Task 3
+- Database: SQLite (default) / MySQL (optional)
 
-- [Home](https://www.w3schools.com/html/default.asp)
-- [Introduction](https://www.w3schools.com/html/html_intro.asp)
-- [Editors](https://www.w3schools.com/html/html_editors.asp)
-- [Basic](https://www.w3schools.com/html/html_basic.asp)
-- [Elements](https://www.w3schools.com/html/html_elements.asp)
-- [Attributes](https://www.w3schools.com/html/html_attributes.asp)
-- [Headings](https://www.w3schools.com/html/html_headings.asp)
-- [Paragraphs](https://www.w3schools.com/html/html_paragraphs.asp)
-- [Styles](https://www.w3schools.com/html/html_styles.asp)
-- [Formatting](https://www.w3schools.com/html/html_formatting.asp)
-- [Quotations](https://www.w3schools.com/html/html_quotation_elements.asp)
-- [Comments](https://www.w3schools.com/html/html_comments.asp)
-- [Colors](https://www.w3schools.com/html/html_colors.asp)
-- [CSS](https://www.w3schools.com/html/html_css.asp)
-- [Links](https://www.w3schools.com/html/html_links.asp)
-- [Images](https://www.w3schools.com/html/html_images.asp)
-- [Lists](https://www.w3schools.com/html/html_lists.asp)
-- [Tables](https://www.w3schools.com/html/html_tables.asp)
-- [Id](https://www.w3schools.com/html/html_id.asp)
-- [Classes](https://www.w3schools.com/html/html_classes.asp)
+- PDF Generator: Laravel DomPDF
 
-## Demo
-- [live](https://aleemath.github.io/Betasquirrel-tasks/)
-- [Stack-overflow](https://stackoverflow.com/users/21197797/aleemath-ranseena-k-k)
-- [linkedin](https://www.linkedin.com/in/aleemath-ranseena-3b6154266/)
+## Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js v22+](https://nodejs.org/)
+
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
+
+- [PHP v8.1+](https://www.php.net/downloads.php)
+
+- [Composer](https://getcomposer.org/download/)
+
+- [MySQL v9.x+](https://dev.mysql.com/downloads/mysql/)
+
+## Setup Instructions
+
+1. Clone the Repository
+
+   git clone `git@github.com:Aleemath/consultation-report.git`
+
+   `cd consultation-report`
+
+2. Backend Setup (Laravel)
+
+   `cd backend`
+
+   `composer install`
+
+   `cp .env.example .env`
+
+   `php artisan key:generate`
+
+Configure Database
+
+- SQLite (default):
+
+  touch database/database.sqlite
+
+- MySQL (optional): Update .env:
+
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=your-database-name
+
+DB_USERNAME=root
+
+DB_PASSWORD=your-db-password-or-empty
+
+## Run Migrations & Seed Database
+
+`php artisan migrate --seed`
+
+## Generate JWT Secret
+
+`php artisan jwt:secret`
+
+## Create Storage Link
+
+`php artisan storage:link`
+
+## Start Laravel Server
+
+`php artisan serve`
+
+## Frontend (React + Vite)
+
+`cd ../frontend`
+
+`yarn install`
+
+`cp .env.example .env`
+
+## Configure Environment Variables
+
+Update .env:
+
+VITE_API_BASE_URL=http://localhost:8000/api/v1
+
+VITE_STORAGE_BASE_URL=http://localhost:8000/storage
+
+## Start Development Server
+
+`npm run dev`
+
+## API Endpoints
+
+## Authentication
+
+| Method | Endpoint     | Description      |
+| ------ | ------------ | ---------------- |
+| POST   | /v1/register | Register user    |
+| POST   | /v1/login    | Login user (JWT) |
+
+## Consultations
+
+| Method | Endpoint                                 | Description                 |
+| ------ | ---------------------------------------- | --------------------------- |
+| POST   | /v1/consultations                        | Create consultation report  |
+| GET    | /v1/consultations?page                   | Get paginated consultations |
+| GET    | /v1/consultations/{id}/report?format=pdf | Generate Report (PDF/TIFF)  |
+| GET    | /v1/consultations/export/csv             | Export consultations to CSV |
+
+---
+
+## Troubleshooting
+
+- Logo not showing?
+
+` php artisan storage:link`
+
+`chmod -R 755 storage public/storage`
+
+- API not reachable?
+
+Ensure VITE_API_BASE_URL points to the Laravel server.
+
+- Logo preview not working?
+
+Confirm VITE_STORAGE_BASE_URL matches the Laravel storage path.
+
+## Future Improvements
+
+- Hosting (currently not hosted due to lack of a paid server)
+
+- API-side pagination, sorting, CSV export, and search for DataTable
+
+- Integrating the frontend within Laravel (currently set up separately)
