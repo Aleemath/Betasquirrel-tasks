@@ -159,6 +159,8 @@ Confirm `VITE_STORAGE_BASE_URL` matches the Laravel storage path.
 
 <img src="frontend/Screenshots/Screenshot 2025-03-24 at 3.03.24 PM.png" alt="Previous lists" width="700">
 
+[Sample Report (PDF)](sample-reports/Consultation_Report-1.pdf)
+
 ## Future Improvements
 
 - Hosting (currently not hosted due to lack of a paid server)
