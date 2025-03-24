@@ -10,7 +10,7 @@ This is a full-stack web application built with Laravel (PHP) for the backend an
 
 - Backend: Laravel 12.x (PHP 8.1+)
 
-- Database: SQLite (default) / MySQL (optional)
+- Database: SQLite / MySQL
 
 - PDF Generator: Laravel DomPDF
 
@@ -32,7 +32,7 @@ Ensure you have the following installed:
 
 1. Clone the Repository
 
-   git clone `git@github.com:Aleemath/consultation-report.git`
+   `git clone git@github.com:Aleemath/consultation-report.git`
 
    `cd consultation-report`
 
@@ -48,23 +48,24 @@ Ensure you have the following installed:
 
 Configure Database
 
-- SQLite (default):
+- SQLite :
 
-  touch database/database.sqlite
+` touch database/database.sqlite`
 
-- MySQL (optional): Update .env:
+- MySQL :
+- Update .env:
 
-DB_CONNECTION=mysql
+          DB_CONNECTION=mysql
 
-DB_HOST=127.0.0.1
+          DB_HOST=127.0.0.1
 
-DB_PORT=3306
+          DB_PORT=3306
 
-DB_DATABASE=your-database-name
+          DB_DATABASE=your-database-name
 
-DB_USERNAME=root
+          DB_USERNAME=root
 
-DB_PASSWORD=your-db-password-or-empty
+          DB_PASSWORD=your-db-password-or-empty
 
 ## Run Migrations & Seed Database
 
@@ -94,9 +95,9 @@ DB_PASSWORD=your-db-password-or-empty
 
 Update .env:
 
-VITE_API_BASE_URL=http://localhost:8000/api/v1
+`VITE_API_BASE_URL=http://localhost:8000/api/v1`
 
-VITE_STORAGE_BASE_URL=http://localhost:8000/storage
+`VITE_STORAGE_BASE_URL=http://localhost:8000/storage`
 
 ## Start Development Server
 
@@ -116,7 +117,7 @@ VITE_STORAGE_BASE_URL=http://localhost:8000/storage
 | Method | Endpoint                                 | Description                 |
 | ------ | ---------------------------------------- | --------------------------- |
 | POST   | /v1/consultations                        | Create consultation report  |
-| GET    | /v1/consultations?page                   | Get paginated consultations |
+| GET    | /v1/consultations                        | Get consultations           |
 | GET    | /v1/consultations/{id}/report?format=pdf | Generate Report (PDF/TIFF)  |
 | GET    | /v1/consultations/export/csv             | Export consultations to CSV |
 
@@ -132,16 +133,36 @@ VITE_STORAGE_BASE_URL=http://localhost:8000/storage
 
 - API not reachable?
 
-Ensure VITE_API_BASE_URL points to the Laravel server.
+Ensure `VITE_API_BASE_URL` points to the Laravel server.
 
 - Logo preview not working?
 
-Confirm VITE_STORAGE_BASE_URL matches the Laravel storage path.
+Confirm `VITE_STORAGE_BASE_URL` matches the Laravel storage path.
+
+## Screenshots
+
+### Registration Page
+
+<img src="frontend/Screenshots/Screenshot 2025-03-24 at 3.00.36 PM.png" alt="Registration" width="700">
+
+### Login Page
+
+<img src="frontend/Screenshots/Screenshot 2025-03-24 at 2.58.12 PM.png" alt="Login" width="700">
+
+### Consultation Page
+
+<img src="frontend/Screenshots/Screenshot 2025-03-24 at 2.58.59 PM.png" alt="Consultation page" width="700">
+
+<img src="frontend/Screenshots/Screenshot 2025-03-24 at 2.59.49 PM.png" alt="Consultation page" width="700">
+
+### Previous Lists
+
+<img src="frontend/Screenshots/Screenshot 2025-03-24 at 3.03.24 PM.png" alt="Previous lists" width="700">
 
 ## Future Improvements
 
 - Hosting (currently not hosted due to lack of a paid server)
 
-- API-side pagination, sorting, CSV export, and search for DataTable
+- API-side pagination, sorting, CSV export, and search for DataTable(currently its done UI)
 
 - Integrating the frontend within Laravel (currently set up separately)
